@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="jquery.appendGrid-1.5.1.js"></script>
+<script type="text/javascript" src="src/bootstrap-dynamicGrid.js"></script>
 <script type="text/javascript">
 $(function () {
     // Initialize appendGrid
@@ -44,9 +44,13 @@ $(function () {
     });	
 });
 </script>
+<style>
+body{margin:25px;}
+</style>
 </head>
 <body>
   <form action="" method="post">
+	<h1>Bootstrap Dynamic Grid</h1>
     <table id="tblAppendGrid" class="table table-bordered"></table>
 	<br>
 <button id="btnLoad" type="button">Demo: Load Data</button>
