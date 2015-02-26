@@ -1,33 +1,33 @@
 {
-  "name": "jquery.appendgrid",
-  "version": "1.5.1",
-  "description": "appendGrid - The dynamic table input jQuery plugin",
-  "main": "jquery.appendGrid-1.5.1.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hkalbertl/jquery.appendGrid"
-  },
-  "keywords": [
-    "jquery-plugin",
-    "ui",
-    "header-detail",
-    "master-detail",
-    "edit",
-    "table",
-    "input",
-    "grid"
-  ],
-  "author": "Albert L. <hkalbertl@outlook.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hkalbertl/jquery.appendGrid/issues"
-  },
-  "homepage": "https://github.com/hkalbertl/jquery.appendGrid",
-  "dependencies": {
-    "jquery": ">=1.11.x",
-    "jquery.ui": ">=1.11.x"
+	"name": "Bootstrap-DynamicGrid",
+	"version": "1.0",
+	"description": "appendGrid - The dynamic table input jQuery plugin",
+	"main": "Bootstrap-DynamicGrid.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mmassari/Bootstrap-DynamicGrid"
+	},
+	"keywords": [
+		"jquery-plugin",
+		"ui",
+		"header-detail",
+		"master-detail",
+		"edit",
+		"table",
+		"input",
+		"grid"
+	],
+	"author": "Michele Massari <michele.massari@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/mmassari/Bootstrap-DynamicGrid/issues"
+	},
+	"homepage": "https://github.com/mmassari/Bootstrap-DynamicGrid",
+	"dependencies": {
+		"jquery": ">=2.x",
+		"bootrstrap": ">=3.x"
   }
 }

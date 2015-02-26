@@ -1,0 +1,62 @@
+<html>
+<head>
+<!--jQuery UI Core, Widget and Button components are mandatory-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="jquery.appendGrid-1.5.1.js"></script>
+<script type="text/javascript">
+$(function () {
+    // Initialize appendGrid
+    $('#tblAppendGrid').appendGrid({
+        //caption: '<h3 style="text-align:center">My CD Collections</h3>',
+        initRows: 1,
+		largeLayout: true,
+        columns: [
+                { name: 'Album', display: 'Album', type: 'text', ctrlAttr: { maxlength: 100 }, col:3 },
+                { name: 'Artist', display: 'Artist', type: 'text', ctrlAttr: { maxlength: 100 }, col:2 },
+                { name: 'Year', display: 'Year', type: 'text', ctrlAttr: { maxlength: 4 }, col:1 },
+                { name: 'Origin', display: 'Origin', type: 'select', ctrlOptions: { 0: '{Choose}', 1: 'Hong Kong', 2: 'Taiwan', 3: 'Japan', 4: 'Korea', 5: 'US', 6: 'Others'}, col:2 },
+                { name: 'Poster', display: 'With Poster?', type: 'checkbox', col: 1 },
+                { name: 'Price', display: 'Price', type: 'number', ctrlAttr: { min:"0.01", max: "10000" }, ctrlCss: { 'text-align': 'right' }, value: 0 , col: 2 },
+                { name: 'RecordId', type: 'hidden', value: 0 , col: 1 }
+            ]
+    });
+    // Handle `Load` button click
+    $('#btnLoad').button().click(function () {
+        $('#tblAppendGrid').appendGrid('load', [
+            { 'Album': 'Dearest', 'Artist': 'Theresa Fu', 'Year': '2009', 'Origin': 1, 'Poster': true, 'Price': 168.9, 'RecordId': 123 },
+            { 'Album': 'To be Free', 'Artist': 'Arashi', 'Year': '2010', 'Origin': 3, 'Poster': true, 'Price': 152.6, 'RecordId': 125 },
+            { 'Album': 'Count On Me', 'Artist': 'Show Luo', 'Year': '2012', 'Origin': 2, 'Poster': false, 'Price': 306.8, 'RecordId': 127 },
+            { 'Album': 'Wonder Party', 'Artist': 'Wonder Girls', 'Year': '2012', 'Origin': 4, 'Poster': true, 'Price': 108.6, 'RecordId': 129 },
+            { 'Album': 'Reflection', 'Artist': 'Kelly Chen', 'Year': '2013', 'Origin': 1, 'Poster': false, 'Price': 138.2, 'RecordId': 131 }
+        ]);
+    });
+    // Handle `Serialize` button click
+    $('#btnSerialize').button().click(function () {
+        alert('Here is the serialized data!!\n' + $(document.forms[0]).serialize());
+    });
+    // Handle `Serialize` button click
+    $('#btnJson').button().click(function () {
+		
+        $("#jsonout").html(JSON.stringify($('#tblAppendGrid').appendGrid('toJson'), null, 4));
+    });	
+});
+</script>
+</head>
+<body>
+  <form action="" method="post">
+    <table id="tblAppendGrid" class="table table-bordered"></table>
+	<br>
+<button id="btnLoad" type="button">Demo: Load Data</button>
+<button id="btnSerialize" type="button">Demo: jQuery Serialize</button>
+<button id="btnJson" type="button">Demo: Serialize to Json</button>
+<div id="jsonout">
+
+</div>
+	
+	</form>
+	</form>
+</body>
+</html>
