@@ -6,7 +6,7 @@ Thi is a dynamic table input ready for Bootstrap.
 **Bootstrap DynamicGrid** allow you to collect structured data row by row such like filling spreadsheets. 
 Just define the table structure with json and a table will be created dynamically with the right controls for each column. It allows you to add/remove/insert/delete row in the grid and you can serialize the data to url or Json. The generated input/select/textarea controls are well named for submitting to server side applications such as ASP.NET/PHP/JSP. Multiple options and callback events are available to fit every situation.
 
-See live demo [here](http://mmassari.com/bootstrap-dynamicgrid/index.htm)
+See live demo [here](http://mmassari.com/github/bootstrap-dynamicgrid/index.htm)
 
 **Note:** This is a fork of jquery.appenGrid by Albert L. (https://github.com/hkalbertl/jquery.appendGrid). In my version I have removed the jquery UI dependency and classes for support Bootstrap 3 framework.
 
